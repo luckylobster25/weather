@@ -88,7 +88,7 @@ buttonEl.addEventListener("click", function () {
 })
 // clear button function
 var clearBtn = document.getElementById("deleteBtn")
-clearBtn.addEventListener("click", function(){
+clearBtn.addEventListener("click", function () {
     var historyOfCityEl = document.getElementById('historyBox')
     historyOfCityEl.textContent = ""
 })
