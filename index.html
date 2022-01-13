@@ -16,17 +16,15 @@
     <nav class="navbar navbar-light bg-light">
         <span id="clock" class="navbar-brand mb-0 h1">Date</span>
     </nav>
-    <header>
-        <div class="form-group">
-            <label for="inputCity">Search by city</label>
-            <input type="text" value="" class="form-control" id="inputCity" aria-describedby="cityHistory">
-        </div>
-        <ul class="list-group" id="historyBox">
-
-        </ul>
-        <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
-    </header>
     <main>
+        <header>
+            <div class="form-group">
+                <label for="inputCity">Search by city</label>
+                <input type="text" value="" class="form-control" id="inputCity" aria-describedby="cityHistory">
+            </div>
+            <ul class="list-group" id="historyBox"></ul>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+        </header>
         <div id="weather-box" class="card weather-box" style="width: 16rem;">
             <img id="icon" src="" class="card-img-top" alt="">
             <div class="card-body">
@@ -41,74 +39,75 @@
                 <li id="uv-color" class="list-group-item"></li>
             </ul>
         </div>
-        <section class="foecast-box">
-            <div id="weather-box1" class="card weather-box" style="width: 9rem;">
-                <img id="icon1" src="" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h4 id="dayOfWeek1" class="card-title">Day 1</h4>
-                    <h6 id="degree1" class="card-title"></h6>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li id="humidity1" class="list-group-item"></li>
-                    <li id="wind1" class="list-group-item"></li>
-                    <li id="uv-index1" class="list-group-item"></li>
-                    <li id="uv-color1" class="list-group-item"></li>
-                </ul>
-            </div>
-            <div id="weather-box2" class="card weather-box" style="width: 9rem;">
-                <img id="icon2" src="" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h4 id="dayOfWeek2" class="card-title">Day 2</h4>
-                    <h6 id="degree2" class="card-title"></h6>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li id="humidity2" class="list-group-item"></li>
-                    <li id="wind2" class="list-group-item"></li>
-                    <li id="uv-index2" class="list-group-item"></li>
-                    <li id="uv-color2" class="list-group-item"></li>
-                </ul>
-            </div>
-            <div id="weather-box3" class="card weather-box" style="width: 9rem;">
-                <img id="icon3" src="" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h4 id="dayOfWeek3" class="card-title">Day 3</h4>
-                    <h6 id="degree3" class="card-title"></h6>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li id="humidity3" class="list-group-item"></li>
-                    <li id="wind3" class="list-group-item"></li>
-                    <li id="uv-index3" class="list-group-item"></li>
-                    <li id="uv-color3" class="list-group-item"></li>
-                </ul>
-            </div>
-            <div id="weather-box4" class="card weather-box" style="width: 9rem;">
-                <img id="icon4" src="" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h4 id="dayOfWeek4" class="card-title">Day 4</h4>
-                    <h6 id="degree4" class="card-title"></h6>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li id="humidity4" class="list-group-item"></li>
-                    <li id="wind4" class="list-group-item"></li>
-                    <li id="uv-index4" class="list-group-item"></li>
-                    <li id="uv-color4" class="list-group-item"></li>
-                </ul>
-            </div>
-            <div id="weather-box5" class="card weather-box" style="width: 9rem;">
-                <img id="icon5" src="" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h4 id="dayOfWeek5" class="card-title">Day 5</h4>
-                    <h6 id="degree5" class="card-title"></h6>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li id="humidity5" class="list-group-item"></li>
-                    <li id="wind5" class="list-group-item"></li>
-                    <li id="uv-index5" class="list-group-item"></li>
-                    <li id="uv-color5" class="list-group-item"></li>
-                </ul>
-            </div>
-        </section>
     </main>
+    <section class="foecast-box">
+        <div id="weather-box1" class="card weather-box" style="width: 9rem;">
+            <img id="icon1" src="" class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 id="dayOfWeek1" class="card-title">Day 1</h4>
+                <h6 id="degree1" class="card-title"></h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="humidity1" class="list-group-item"></li>
+                <li id="wind1" class="list-group-item"></li>
+                <li id="uv-index1" class="list-group-item"></li>
+                <li id="uv-color1" class="list-group-item"></li>
+            </ul>
+        </div>
+        <div id="weather-box2" class="card weather-box" style="width: 9rem;">
+            <img id="icon2" src="" class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 id="dayOfWeek2" class="card-title">Day 2</h4>
+                <h6 id="degree2" class="card-title"></h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="humidity2" class="list-group-item"></li>
+                <li id="wind2" class="list-group-item"></li>
+                <li id="uv-index2" class="list-group-item"></li>
+                <li id="uv-color2" class="list-group-item"></li>
+            </ul>
+        </div>
+        <div id="weather-box3" class="card weather-box" style="width: 9rem;">
+            <img id="icon3" src="" class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 id="dayOfWeek3" class="card-title">Day 3</h4>
+                <h6 id="degree3" class="card-title"></h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="humidity3" class="list-group-item"></li>
+                <li id="wind3" class="list-group-item"></li>
+                <li id="uv-index3" class="list-group-item"></li>
+                <li id="uv-color3" class="list-group-item"></li>
+            </ul>
+        </div>
+        <div id="weather-box4" class="card weather-box" style="width: 9rem;">
+            <img id="icon4" src="" class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 id="dayOfWeek4" class="card-title">Day 4</h4>
+                <h6 id="degree4" class="card-title"></h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="humidity4" class="list-group-item"></li>
+                <li id="wind4" class="list-group-item"></li>
+                <li id="uv-index4" class="list-group-item"></li>
+                <li id="uv-color4" class="list-group-item"></li>
+            </ul>
+        </div>
+        <div id="weather-box5" class="card weather-box" style="width: 9rem;">
+            <img id="icon5" src="" class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 id="dayOfWeek5" class="card-title">Day 5</h4>
+                <h6 id="degree5" class="card-title"></h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="humidity5" class="list-group-item"></li>
+                <li id="wind5" class="list-group-item"></li>
+                <li id="uv-index5" class="list-group-item"></li>
+                <li id="uv-color5" class="list-group-item"></li>
+            </ul>
+        </div>
+    </section>
+
     <script src="script.js"></script>
     <script src="day1.js"></script>
     <script src="day2.js"></script>

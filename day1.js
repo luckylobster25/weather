@@ -1,30 +1,29 @@
 var currentDay = moment().format('dddd')
 var nextDay = ''
-console.log(currentDay);
-if (currentDay === "Monday"){
+if (currentDay === "Monday") {
     nextDay = "Tuesday"
     document.getElementById("dayOfWeek1").textContent = nextDay
 }
-else if (currentDay === "Tuesday"){
+else if (currentDay === "Tuesday") {
     nextDay = "Wednesday"
     document.getElementById("dayOfWeek1").textContent = nextDay
 }
-else if (currentDay === "Wednesday"){
+else if (currentDay === "Wednesday") {
     nextDay = "Thursday"
     document.getElementById("dayOfWeek1").textContent = nextDay
 }
-else if (currentDay === "Thursday"){
+else if (currentDay === "Thursday") {
     nextDay = "Friday"
     document.getElementById("dayOfWeek1").textContent = nextDay
 }
-else if (currentDay === "Friday"){
+else if (currentDay === "Friday") {
     nextDay = "Saturday"
     document.getElementById("dayOfWeek1").textContent = nextDay
 }
-else if (currentDay === "Saturday"){
+else if (currentDay === "Saturday") {
     nextDay = "Sunday"
     document.getElementById("dayOfWeek1").textContent = nextDay
-}else{
+} else {
     nextDay = "Monday"
     document.getElementById("dayOfWeek1").textContent = nextDay
 }
@@ -61,15 +60,15 @@ var getWeather1 = function (city) {
                             document.getElementById('wind1').textContent = "Wind: " + daily.wind + "mph"
                             var uvIndex = document.getElementById('uv-index1')
                             if (daily.uv < 2) {
-                                uvIndex.textContent = "UV: " + daily.uv +" level: Low"
+                                uvIndex.textContent = "UV: " + daily.uv + " level: Low"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv0-2')
                             } if (daily.uv > 2 && daily.uv < 6) {
-                                uvIndex.textContent = "UV: " + daily.uv +" level: Moderate"
+                                uvIndex.textContent = "UV: " + daily.uv + " level: Moderate"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv3-5')
                             } if (daily.uv > 6 && daily.uv < 8) {
-                                uvIndex.textContent = "UV: " + daily.uv  +" level: High"
+                                uvIndex.textContent = "UV: " + daily.uv + " level: High"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv6-7')
                             } if (daily.uv > 8 && daily.uv < 11) {
@@ -99,5 +98,5 @@ var buttonEl = document.getElementById("submitBtn")
 buttonEl.addEventListener("click", function () {
     var search = document.getElementById("inputCity").value
     getWeather1(search)
-    
+
 })

@@ -30,4 +30,18 @@ section {
 }
 .card {
     flex: 1 .5;
+    margin-left: auto;
+    margin-right: auto;
+}
+main {
+    display: flex;
+    background: linear-gradient(180deg,rgba(231, 94, 3, 0.829),rgba(255, 123, 0, 0.801),rgba(255, 166, 0, 0.479),rgba(255, 255, 0, 0.479));
+}
+.card-img-top {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100px;
+}
+.bg-light {
+    background-color: #fa6429!important;
 }
