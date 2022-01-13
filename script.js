@@ -89,3 +89,8 @@ buttonEl.addEventListener("click", function () {
     historyOfCityEl.appendChild(cityLi)
     console.log();
 })
+var clearBtn = document.getElementById("deleteBtn")
+clearBtn.addEventListener("click", function(){
+    var historyOfCityEl = document.getElementById('historyBox')
+    historyOfCityEl.textContent = ""
+})
