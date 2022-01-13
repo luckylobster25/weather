@@ -7,22 +7,27 @@
 }
 .uv0-2 {
     background: linear-gradient(90deg,green,rgb(229, 255, 0));
+    list-style: bengali;
 }
 .uv3-5 {
     background: linear-gradient(90deg,yellow, rgb(255, 187, 0));
+    list-style: bengali;
 }
 .uv6-7 {
     background: linear-gradient(90deg, orange, rgb(255, 72, 0));
+    list-style: bengali;
 }
 .uv8-10 {
     background: linear-gradient(90deg, red, rgb(139, 3, 94));
+    list-style: bengali;
 }
 .uv11up {
     background: linear-gradient(90deg,purple, rgb(51, 1, 51) );
-}
-.foecast.box {
-
+    list-style: bengali;
 }
 section {
     display: flex;
+}
+.card {
+    flex: 1 .5;
 }
