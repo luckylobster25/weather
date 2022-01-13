@@ -20,3 +20,9 @@
 .uv11up {
     background: linear-gradient(90deg,purple, rgb(51, 1, 51) );
 }
+.foecast.box {
+
+}
+section {
+    display: flex;
+}

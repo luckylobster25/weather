@@ -53,31 +53,31 @@ var getWeather1 = function (city) {
                                 icon: data.daily[0].weather[0].icon
                             }
                             //adding daily[0] temp
-                            document.getElementById('degree1').textContent = "Low: " + Math.floor(daily.lowTemp) + "°  " + "High: " + Math.floor(daily.highTemp) + "°"
+                            document.getElementById('degree1').textContent = "Low: " + Math.floor(daily.lowTemp) + "°  " + " High: " + Math.floor(daily.highTemp) + "°"
                             //adding weather icon to html
                             document.getElementById('icon1').setAttribute("src", `http://openweathermap.org/img/wn/${daily.icon}@2x.png`)
                             // document.getElementById('feels_like1').textContent = "Feels like " + Math.floor(daily.feel) + "°"
                             document.getElementById('humidity1').textContent = "Humidity: " + daily.humidity
-                            document.getElementById('wind1').textContent = "Wind Spd:" + daily.wind + "mph"
+                            document.getElementById('wind1').textContent = "Wind: " + daily.wind + "mph"
                             var uvIndex = document.getElementById('uv-index1')
                             if (daily.uv < 2) {
-                                uvIndex.textContent = "UV: " + daily.uv +"\r" +"Risk-level: Low"
+                                uvIndex.textContent = "UV: " + daily.uv +" level: Low"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv0-2')
                             } if (daily.uv > 2 && daily.uv < 6) {
-                                uvIndex.textContent = "UV: " + daily.uv + "\n"+"Risk-level: Moderate"
+                                uvIndex.textContent = "UV: " + daily.uv +" level: Moderate"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv3-5')
                             } if (daily.uv > 6 && daily.uv < 8) {
-                                uvIndex.textContent = "UV: " + daily.uv + " \n " +"Risk-level: High"
+                                uvIndex.textContent = "UV: " + daily.uv  +" level: High"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv6-7')
                             } if (daily.uv > 8 && daily.uv < 11) {
-                                uvIndex.textContent = "UV: " + daily[0].uv + "\n Risk-level: Very High"
+                                uvIndex.textContent = "UV: " + daily.uv + " level: Very High"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv8-10')
                             } if (daily.uv > 11) {
-                                uvIndex.textContent = "UV: " + daily.uv + "\n Risk-level: Extreme"
+                                uvIndex.textContent = "UV: " + daily.uv + " level: Extreme"
                                 var uvColor = document.getElementById("uv-color1");
                                 uvColor.setAttribute('class', 'uv11up')
                             }
