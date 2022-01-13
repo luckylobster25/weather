@@ -16,31 +16,53 @@
     <nav class="navbar navbar-light bg-light">
         <span id="clock" class="navbar-brand mb-0 h1">Date</span>
     </nav>
-    <article>
+    <header>
         <div class="form-group">
             <label for="inputCity">Search by city</label>
             <input type="text" value="" class="form-control" id="inputCity" aria-describedby="cityHistory">
         </div>
         <ul class="list-group" id="historyBox">
-    
+
         </ul>
         <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
-    </article>
-    <div id="weather-box" class="card weather-box" style="width: 18rem;">
-        <img id="icon" src="" class="card-img-top" alt="">
-        <div class="card-body">
-            <h4 id="cityName" class="card-title">City name</h4>
-            <h6 id="degree" class="card-title"></h6>
+    </header>
+    <main>
+        <div id="weather-box" class="card weather-box" style="width: 13rem;">
+            <img id="icon" src="" class="card-img-top" alt="">
+            <div class="card-body">
+                <h4 id="cityName" class="card-title">City name</h4>
+                <h6 id="degree" class="card-title"></h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="feels_like" class="list-group-item"></li>
+                <li id="humidity" class="list-group-item"></li>
+                <li id="wind" class="list-group-item"></li>
+                <li id="uv-index" class="list-group-item"></li>
+                <li id="uv-color" class="list-group-item"></li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li id="feels_like" class="list-group-item"></li>
-            <li id="humidity" class="list-group-item"></li>
-            <li id="wind" class="list-group-item"></li>
-            <li id="uv-index" class="list-group-item"></li>
-            <li id="uv-color"></li>
-        </ul>
-    </div>
+        <section class="foecast-box">
+            <div id="weather-box1" class="card weather-box" style="width: 13rem;">
+                <img id="icon1" src="" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h4 id="dayOfWeek" class="card-title">Day 1</h4>
+                    <h6 id="degree1" class="card-title"></h6>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li id="humidity1" class="list-group-item"></li>
+                    <li id="wind1" class="list-group-item"></li>
+                    <li id="uv-index1" class="list-group-item"></li>
+                    <li id="uv-color1" class="list-group-item"></li>
+                </ul>
+        </section>
+        </div>
+    </main>
     <script src="script.js"></script>
+    <script src="day1.js"></script>
+    <script src="day2.js"></script>
+    <script src="day3.js"></script>
+    <script src="day4.js"></script>
+    <script src="day5.js"></script>
 </body>
 
 </html>

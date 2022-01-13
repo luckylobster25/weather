@@ -3,9 +3,7 @@ setInterval(function () {
     var currentDisplayEl = moment().format("[Today is] dddd, MMMM Do YYYY");
     document.getElementById('clock').textContent = currentDisplayEl
 }, 0)
-// var savedCity = document.getElementById('cityHistory')
-// console.log(localStorage.getItem("city"));
-// savedCity.textContent = localStorage.getItem("city")
+var currentDay = moment().format('dddd')
 
 // function to fetch API
 var getWeather = function (city) {
@@ -30,7 +28,7 @@ var getWeather = function (city) {
                                 uv: data.current.uvi,
                                 icon: data.current.weather[0].icon
                             }
-
+                           
                             console.log(current, data);
                             //adding current temp
                             document.getElementById('degree').textContent = "Current Temp: " + Math.floor(current.temp) + "°"
@@ -41,29 +39,29 @@ var getWeather = function (city) {
                             var nameOfCity = document.getElementById("cityName")
                             nameOfCity.textContent = cityInput.toUpperCase()
                             document.getElementById('feels_like').textContent = "Feels like " + Math.floor(current.feel) + "°"
-                            document.getElementById('humidity').textContent = "Humidity: " + current.humidity 
+                            document.getElementById('humidity').textContent = "Humidity: " + current.humidity
                             document.getElementById('wind').textContent = "Wind Speed: " + current.wind + " mph"
                             var uvIndex = document.getElementById('uv-index')
-                            if (current.uv < 2 ){
+                            if (current.uv < 2) {
                                 uvIndex.textContent = "UV: " + current.uv + " | Risk-level: Low"
                                 var uvColor = document.getElementById("uv-color");
-                                uvColor.setAttribute('class','uv0-2')
-                            }if (current.uv > 2 && current.uv <6){
+                                uvColor.setAttribute('class', 'uv0-2')
+                            } if (current.uv > 2 && current.uv < 6) {
                                 uvIndex.textContent = "UV: " + current.uv + " | Risk-level: Moderate"
                                 var uvColor = document.getElementById("uv-color");
-                                uvColor.setAttribute('class','uv3-5')
-                            }if (current.uv > 6 && current.uv <8){
+                                uvColor.setAttribute('class', 'uv3-5')
+                            } if (current.uv > 6 && current.uv < 8) {
                                 uvIndex.textContent = "UV: " + current.uv + " | Risk-level: High"
                                 var uvColor = document.getElementById("uv-color");
-                                uvColor.setAttribute('class','uv6-7')
-                            }if (current.uv > 8 && current.uv <11){
+                                uvColor.setAttribute('class', 'uv6-7')
+                            } if (current.uv > 8 && current.uv < 11) {
                                 uvIndex.textContent = "UV: " + current.uv + " | Risk-level: Very High"
                                 var uvColor = document.getElementById("uv-color");
-                                uvColor.setAttribute('class','uv8-10')
-                            }if (current.uv > 11) {
+                                uvColor.setAttribute('class', 'uv8-10')
+                            } if (current.uv > 11) {
                                 uvIndex.textContent = "UV: " + current.uv + " | Risk-level: Extreme"
                                 var uvColor = document.getElementById("uv-color");
-                                uvColor.setAttribute('class','uv11up')
+                                uvColor.setAttribute('class', 'uv11up')
                             }
                             console.log(current.feel);
                             //to display weather box on webpage
