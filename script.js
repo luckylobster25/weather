@@ -8,18 +8,17 @@ var currentDay = moment().format('dddd')
 // function to fetch API
 var getWeather = function (city) {
     var apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=addb76e535c4e5e7659ab5807b934e3b`;
-    // lookuplocation need to be in html 
     fetch(apiUrl)
         .then(function (response) {
             return response.json().then(function (data) {
-                //this is the data object.
+                //API to find the latitude and longitude of user input if it is a city. 
                 var lon = data[0].lon
                 var lat = data[0].lat
                 console.log(data);
                 return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=addb76e535c4e5e7659ab5807b934e3b`)
                     .then(function (response) {
                         return response.json().then(function (data) {
-                            //object data storing in variable called current
+                            //API to get data for current weather
                             var current = {
                                 feel: data.current.feels_like,
                                 humidity: data.current.humidity,
@@ -28,8 +27,6 @@ var getWeather = function (city) {
                                 uv: data.current.uvi,
                                 icon: data.current.weather[0].icon
                             }
-                           
-                            console.log(current, data);
                             //adding current temp
                             document.getElementById('degree').textContent = "Current Temp: " + Math.floor(current.temp) + "°"
                             //adding weather icon to html
@@ -42,6 +39,7 @@ var getWeather = function (city) {
                             document.getElementById('humidity').textContent = "Humidity: " + current.humidity
                             document.getElementById('wind').textContent = "Wind Speed: " + current.wind + " mph"
                             var uvIndex = document.getElementById('uv-index')
+                            // UV index comparison statement for color
                             if (current.uv < 2) {
                                 uvIndex.textContent = "UV: " + current.uv + " | Risk-level: Low"
                                 var uvColor = document.getElementById("uv-color");
@@ -77,20 +75,21 @@ var getWeather = function (city) {
 
 
 var buttonEl = document.getElementById("submitBtn")
-// button executing code when click
+// button executing code when submit button is clicked
 buttonEl.addEventListener("click", function () {
     var search = document.getElementById("inputCity").value
     getWeather(search)
     let cityInputEl = document.getElementById("inputCity")
     var cityLi = document.createElement('li')
-    cityLi.setAttribute('class', 'list-group-item')
+    cityLi.setAttribute('class', `list-group-item`)
     cityLi.textContent = cityInputEl.value
     var historyOfCityEl = document.getElementById('historyBox')
     historyOfCityEl.appendChild(cityLi)
-    console.log();
 })
+// clear button function
 var clearBtn = document.getElementById("deleteBtn")
 clearBtn.addEventListener("click", function(){
     var historyOfCityEl = document.getElementById('historyBox')
     historyOfCityEl.textContent = ""
 })
+

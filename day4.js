@@ -29,19 +29,18 @@ else if (currentDay === "Saturday"){
 }
 // function to fetch API
 var getWeather4 = function (city) {
-    var apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=addb76e535c4e5e7659ab5807b934e3b`;
-    // lookuplocation need to be in html 
+    var apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=addb76e535c4e5e7659ab5807b934e3b`; 
     fetch(apiUrl)
         .then(function (response) {
             return response.json().then(function (data) {
-                //this is the data object.
+                //API to find the latitude and longitude of user input if it is a city.
                 var lon = data[0].lon
                 var lat = data[0].lat
                 console.log(data);
                 return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=addb76e535c4e5e7659ab5807b934e3b`)
                     .then(function (response) {
                         return response.json().then(function (data) {
-                            //object data storing in variable called daily[3]
+                            //API to get data for daily day 4 weather
                             var daily = {
                                 feel: data.daily[3].feels_like,
                                 humidity: data.daily[3].humidity,
@@ -55,10 +54,10 @@ var getWeather4 = function (city) {
                             document.getElementById('degree4').textContent = "Low: " + Math.floor(daily.lowTemp) + "°  " + " High: " + Math.floor(daily.highTemp) + "°"
                             //adding weather icon to html
                             document.getElementById('icon4').setAttribute("src", `http://openweathermap.org/img/wn/${daily.icon}@2x.png`)
-                            // document.getElementById('feels_like1').textContent = "Feels like " + Math.floor(daily.feel) + "°"
                             document.getElementById('humidity4').textContent = "Humidity: " + daily.humidity
                             document.getElementById('wind4').textContent = "Wind: " + daily.wind + "mph"
                             var uvIndex = document.getElementById('uv-index4')
+                            // UV index comparison statement for color
                             if (daily.uv < 2) {
                                 uvIndex.textContent = "UV: " + daily.uv  +" level: Low"
                                 var uvColor = document.getElementById("uv-color4");

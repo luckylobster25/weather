@@ -18,6 +18,7 @@
     </nav>
     <main>
         <header>
+            <!-- Current day  -->
             <div class="form-group">
                 <label for="inputCity">Search by city</label>
                 <input type="text" value="" class="form-control" id="inputCity" aria-describedby="cityHistory">
@@ -33,7 +34,7 @@
                 <h6 id="degree" class="card-title"></h6>
             </div>
             <ul class="list-group list-group-flush">
-                <li id="feels_like" class="list-group-item"></li>
+                <li title="" id="feels_like" class="list-group-item"></li>
                 <li id="humidity" class="list-group-item"></li>
                 <li id="wind" class="list-group-item"></li>
                 <li id="uv-index" class="list-group-item"></li>
@@ -42,6 +43,7 @@
         </div>
     </main>
     <section class="foecast-box">
+        <!-- Day 1 foecast  -->
         <div id="weather-box1" class="card weather-box" style="width: 9rem;">
             <img id="icon1" src="" class="card-img-top" alt="">
             <div class="card-body">
@@ -55,6 +57,7 @@
                 <li id="uv-color1" class="list-group-item"></li>
             </ul>
         </div>
+        <!-- Day 2 foecast  -->
         <div id="weather-box2" class="card weather-box" style="width: 9rem;">
             <img id="icon2" src="" class="card-img-top" alt="">
             <div class="card-body">
@@ -68,6 +71,7 @@
                 <li id="uv-color2" class="list-group-item"></li>
             </ul>
         </div>
+        <!-- Day 3 foecast  -->
         <div id="weather-box3" class="card weather-box" style="width: 9rem;">
             <img id="icon3" src="" class="card-img-top" alt="">
             <div class="card-body">
@@ -81,6 +85,7 @@
                 <li id="uv-color3" class="list-group-item"></li>
             </ul>
         </div>
+        <!-- Day 4 foecast  -->
         <div id="weather-box4" class="card weather-box" style="width: 9rem;">
             <img id="icon4" src="" class="card-img-top" alt="">
             <div class="card-body">
@@ -94,6 +99,7 @@
                 <li id="uv-color4" class="list-group-item"></li>
             </ul>
         </div>
+        <!-- Day 5 foecast  -->
         <div id="weather-box5" class="card weather-box" style="width: 9rem;">
             <img id="icon5" src="" class="card-img-top" alt="">
             <div class="card-body">
@@ -108,7 +114,7 @@
             </ul>
         </div>
     </section>
-
+<!-- multiple javascript file for each foecast day  -->
     <script src="script.js"></script>
     <script src="day1.js"></script>
     <script src="day2.js"></script>

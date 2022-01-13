@@ -1,9 +1,6 @@
-
+/* Styling code that overwrite bootstrap */
 .weather-box {
     display: none;
-}
-.float-right {
-    float: right;
 }
 .uv0-2 {
     background: linear-gradient(90deg,green,rgb(229, 255, 0));
@@ -57,3 +54,4 @@ label {
     font-family: fangsong;
     padding-left: 10%;
 }
+/* Main style file is Bootstrap */
