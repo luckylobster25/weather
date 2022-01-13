@@ -1,8 +1,13 @@
+// Code for date 
 setInterval(function () {
     var currentDisplayEl = moment().format("[Today is] dddd, MMMM Do YYYY");
     document.getElementById('clock').textContent = currentDisplayEl
 }, 0)
+// var savedCity = document.getElementById('cityHistory')
+console.log(localStorage.getItem("city"));
+// savedCity.textContent = localStorage.getItem("city")
 
+// function to fetch API
 var getWeather = function (city) {
     var apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=addb76e535c4e5e7659ab5807b934e3b`;
     // lookuplocation need to be in html 
@@ -44,9 +49,17 @@ var getWeather = function (city) {
 
 }
 
-var buttonEl = document.getElementById("submitBtn")
-buttonEl.addEventListener("click", function () {
 
+var buttonEl = document.getElementById("submitBtn")
+// button executing code when click
+buttonEl.addEventListener("click", function () {
     var search = document.getElementById("inputCity").value
     getWeather(search)
+    let cityInputEl = document.getElementById("inputCity")
+    var cityLi = document.createElement('li')
+    cityLi.setAttribute('class', 'list-group-item')
+    cityLi.textContent = cityInputEl.value
+    var historyOfCityEl = document.getElementById('historyBox')
+    historyOfCityEl.appendChild(cityLi)
+    console.log();
 })

@@ -2,3 +2,6 @@
 .weather-box {
     display: none;
 }
+.float-right {
+    float: right;
+}
