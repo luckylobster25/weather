@@ -23,6 +23,7 @@ var getWeather = function (city) {
                                 clouds: data.current.clouds,
                                 icon: data.current.weather[0].icon
                             }
+
                             console.log(current, data);
                             //adding current temp
                             document.getElementById('degree').textContent = "Current Temp: " + Math.floor(current.temp) + "°"
@@ -32,7 +33,9 @@ var getWeather = function (city) {
                             var cityInput = document.getElementById("inputCity").value
                             var nameOfCity = document.getElementById("cityName")
                             nameOfCity.textContent = cityInput.toUpperCase()
-
+                            //to display weather box on webpage
+                            var boxEl = document.getElementById("weather-box")
+                            boxEl.setAttribute("class", "card")
 
                         })
                     })
